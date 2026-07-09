@@ -1,0 +1,42 @@
+.top-box{
+    width: 50px;
+    height: 50px;
+}
+.fa-envelope, .fa-phone, .fa-location-dot{
+    font-size: 25px;
+}
+.shadows{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.input1{
+    width: 400px!important;
+}
+.input2{
+    width: 810px;
+}
+#message{
+    width: 810px;
+    border-radius: 10px;
+}
+textarea{
+    resize: none;
+}
+
+.form-control{
+    border-radius: 12px;
+    padding: 12px;
+}
+
+@media (max-width:768px){
+
+    .shadows{
+        padding:20px !important;
+    }
+
+    .btn{
+        width:100%;
+    }
+}   
+.map{
+    overflow: hidden;
+}

@@ -1,0 +1,14 @@
+.log-icon{
+    width: 60px;
+    height: 60px;
+}
+.fa-arrow-right-to-bracket{
+    font-size: 25px;
+}
+form{
+    width: 450px;
+    margin: auto;
+}
+.shadows{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

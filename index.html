@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+   
+  </head>
+  <body>
+    <div class="hero position-relative" >
+      <div class="container-fluid hero-image">
+        <div
+          class="container position-absolute z-index-1 top-50 start-50 translate-middle"
+        >
+          <div class="hero-content">
+            <h1 class="display-4 fw-bold primary-color">
+              Shop and Support Local
+            </h1>
+            <h1 class="display-4 fw-bold primary-color">
+              Products <span class="secondary-color">Support Cambodian</span>
+            </h1>
+            <p class="lead primary-color">
+              Support Cambodian artisans and find authentic <br />
+              handmade products from local sellers
+            </p>
+            <a
+              href="products.html"
+              class="btn text-white btn-lg btn-primary-color rounded-4 me-3"
+              >Shop Now</a
+            >
+            <a
+              href="products.html"
+              class="btn btn-lg rounded-4 secondary-color btn-outline-secondary-color"
+              >Meet Seller</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="container box position-absolute z-index-1 start-50 translate-middle disti-box rounded-5">
+            <div class="row px-5 py-3">
+              <div class="col-4 d-flex text-white align-items-center">
+                <i class="fa-regular fa-truck fs-2 me-3"></i>
+                <div class="pt-3">
+                  <h5>Fast Local Delivery</h5>
+                  <p>Quick delivery in your area</p>
+                </div>
+              </div>
+              <div class="col-4 d-flex text-white align-items-center">
+                <i class="fa-solid fa-kaaba fs-2 me-3"></i>
+                <div class="pt-3">
+                  <h5>Safe & Secure Shopping</h5>
+                  <p>Secure, easy returns</p>
+                </div>
+              </div>
+              <div class="col-4 d-flex text-white align-items-center">
+                <i class="fa-solid fa-users  fs-2 me-3"></i>
+                <div class="pt-3">
+                  <h5>Support Local Makers</h5>
+                  <p>Empowering our community</p>
+                </div>
+              </div>
+            </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="black-overlay bg-dark w-100 position-absolute top-0"></div>
+
+    <header class="position-absolute top-0 start-0 w-100 py-3 z-3">
+      <nav class="navbar navbar-expand-lg animate__zoomIn">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="/images/logo.png"
+              alt="Logo"
+              width="150"
+              class="img-fluid"
+            />
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarMenu"
+          >
+            <ul class="navbar-nav align-items-lg-center mb-3 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="categories.html">
+                  Categories
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="products.html">
+                  Products
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white px-lg-3"
+                  href="local-sellers.html"
+                >
+                  Local Seller
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="about.html">
+                  About
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="contact.html">
+                  Contact
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="wishlist.html">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white px-lg-3" href="order.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white px-lg-3 text-decoration-none"
+                  href=""
+                >
+                  <img src="/images/kh.svg" alt="" class="flag" />
+                  <span>|</span>
+                  <img src="/images/eg.svg" alt="" class="flag" />
+                </a>
+              </li>
+            </ul>
+
+            <a
+              href="login.html"
+              class="btn btn-outline-light rounded-pill ms-lg-3 px-4"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container section-1 py-5 mt-4">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="rounded-5 h-100 text-center p-4 cart">
+              <div class="top-icon mx-auto mb-4">
+                <i class="fa-solid fa-bag-shopping secondary-color fs-2"></i>
+              </div>
+
+              <h2 class="primary-color fs-3">Authentic Products</h2>
+
+              <p class="primary-color mb-0 fw-normal">
+                100% genuine handmade products from local artisans.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="rounded-5 h-100 text-center p-4 cart">
+              <div class="top-icon mx-auto mb-4">
+                <i class="fa-solid fa-arrow-trend-up secondary-color fs-2"></i>
+              </div>
+
+              <h2 class="primary-color fs-3">Support Local</h2>
+
+              <p class="primary-color mb-0 fw-normal">
+                Directly support Cambodian craftspeople and communities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="rounded-5 h-100 text-center p-4 cart">
+              <div class="top-icon mx-auto mb-4">
+                <i class="fa-regular fa-star secondary-color fs-2"></i>
+              </div>
+
+              <h2 class="primary-color fs-3">Quality Guaranteed</h2>
+
+              <p class="primary-color mb-0 fw-normal">
+                Every product is carefully vetted for quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container section-2 mt-4">
+        <div class="d-flex justify-content-between">
+          <h2 class="primary-color">Categories</h2>
+          <button
+            type="button"
+            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all"
+          >
+            View all
+          </button>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="rounded-4 h-100 cart-category">
+            <a href="products.html">
+              <img
+                src="/images/food.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-4"
+              />
+            </a>
+          </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="rounded-4 h-100 cart-category">
+            <a href="products.html">
+              <img
+                src="/images/drink.jpeg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-4"
+              />
+            </a>
+          </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="rounded-4 h-100 cart-category">
+            <a href="products.html">
+              <img
+                src="/images/Spices.jpeg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-4"
+              />
+            </a>
+          </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="rounded-4 h-100 cart-category">
+            <a href="products.html">
+              <img
+                src="/images/Clothes.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-4"
+              />
+            </a>
+          </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container section-3 mt-5">
+        <div class="d-flex justify-content-between">
+          <h2 class="primary-color">Products</h2>
+          <button
+            type="button"
+            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all"
+          >
+            View all
+          </button>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="product-cart rounded-4 h-100 px-2">
+              <div class="top">
+              <img
+                src="/images/idk-hoodi.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-top-4"
+              />
+            </div>
+            <div class="bottom">
+              <h4 class="mt-3">IDK Hoodi</h4>
+              <p class="fw-normal">
+                100% genuine handmade products from local artisans
+              </p>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="fa-solid fa-star fs-7 text-warning"></i>
+                  <span class="fw-normal primary-color">4.5</span>
+                </div>
+                <h5 class="primary-color">$15.00</h5>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+    <button type="button"
+        class="btn btn-outline-primary-color primary-color flex-grow-1 rounded-4">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+
+    <button type="button"
+        class="btn btn-outline-secondary-color secondary-color rounded-4">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+</div>
+            </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="product-cart rounded-4 h-100 px-2">
+              <div class="top">
+              <img
+                src="/images/idk-hoodi.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-top-4"
+              />
+            </div>
+            <div class="bottom">
+              <h4 class="mt-3">IDK Hoodi</h4>
+              <p class="fw-normal">
+                100% genuine handmade products from local artisans
+              </p>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="fa-solid fa-star fs-7 text-warning"></i>
+                  <span class="fw-normal primary-color">4.5</span>
+                </div>
+                <h5 class="primary-color">$15.00</h5>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+    <button type="button"
+        class="btn btn-outline-primary-color primary-color flex-grow-1 rounded-4">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+
+    <button type="button"
+        class="btn btn-outline-secondary-color secondary-color rounded-4">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+</div>
+            </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="product-cart rounded-4 h-100 px-2">
+              <div class="top">
+              <img
+                src="/images/idk-hoodi.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-top-4"
+              />
+            </div>
+            <div class="bottom">
+              <h4 class="mt-3">IDK Hoodi</h4>
+              <p class="fw-normal">
+                100% genuine handmade products from local artisans
+              </p>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="fa-solid fa-star fs-7 text-warning"></i>
+                  <span class="fw-normal primary-color">4.5</span>
+                </div>
+                <h5 class="primary-color">$15.00</h5>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+    <button type="button"
+        class="btn btn-outline-primary-color primary-color flex-grow-1 rounded-4">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+
+    <button type="button"
+        class="btn btn-outline-secondary-color secondary-color rounded-4">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+</div>
+            </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="product-cart rounded-4 h-100 px-2">
+              <div class="top">
+              <img
+                src="/images/idk-hoodi.jpg"
+                alt=""
+                class="w-100 h-100 object-fit-cover rounded-top-4"
+              />
+            </div>
+            <div class="bottom">
+              <h4 class="mt-3">IDK Hoodi</h4>
+              <p class="fw-normal">
+                100% genuine handmade products from local artisans
+              </p>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="fa-solid fa-star fs-7 text-warning"></i>
+                  <span class="fw-normal primary-color">4.5</span>
+                </div>
+                <h5 class="primary-color">$15.00</h5>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+    <button type="button"
+        class="btn btn-outline-primary-color primary-color flex-grow-1 rounded-4">
+        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+    </button>
+
+    <button type="button"
+        class="btn btn-outline-secondary-color secondary-color rounded-4">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+</div>
+            </div>
+            </div>
+          </div>
+         
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section>
+      <div class="container section-4 mt-5">
+        <div class="d-flex justify-content-between">
+          <h2 class="primary-color">Khmer Brands</h2>
+          <button
+            type="button"
+            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all"
+          >
+            View all
+          </button>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cart-brand rounded-4 h-100">
+              <a href="products.html" class="text-decoration-none">
+              <div class="top">
+                <img
+                  src="/images/idk-hoodi.jpg"
+                  alt=""
+                  class="w-100 h-100 rounded-top-4 object-fit-cover"
+                />
+              </div>
+              <div class="bottom px-3">
+                <h4 class="mt-3 text-dark">IDK Hoodi</h4>
+                <p class="fw-normal text-secondary">
+                  100% genuine handmade products from local artisans. 100%
+                  genuine handmade products from local artisans
+                </p>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <i class="fa-solid fa-star fs-7 text-warning"></i>
+                    <span class="fw-normal primary-color">4.5</span>
+                  </div>
+                  <p class="primary-color fw-normal">10 products</p>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cart-brand rounded-4 h-100">
+              <a href="products.html" class="text-decoration-none">
+              <div class="top">
+                <img
+                  src="/images/idk-hoodi.jpg"
+                  alt=""
+                  class="w-100 h-100 rounded-top-4 object-fit-cover"
+                />
+              </div>
+              <div class="bottom px-3">
+                <h4 class="mt-3 text-dark">IDK Hoodi</h4>
+                <p class="fw-normal text-secondary">
+                  100% genuine handmade products from local artisans. 100%
+                  genuine handmade products from local artisans
+                </p>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <i class="fa-solid fa-star fs-7 text-warning"></i>
+                    <span class="fw-normal primary-color">4.5</span>
+                  </div>
+                  <p class="primary-color fw-normal">10 products</p>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cart-brand rounded-4 h-100">
+              <a href="products.html" class="text-decoration-none">
+              <div class="top">
+                <img
+                  src="/images/idk-hoodi.jpg"
+                  alt=""
+                  class="w-100 h-100 rounded-top-4 object-fit-cover"
+                />
+              </div>
+              <div class="bottom px-3">
+                <h4 class="mt-3 text-dark">IDK Hoodi</h4>
+                <p class="fw-normal text-secondary">
+                  100% genuine handmade products from local artisans. 100%
+                  genuine handmade products from local artisans
+                </p>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <i class="fa-solid fa-star fs-7 text-warning"></i>
+                    <span class="fw-normal primary-color">4.5</span>
+                  </div>
+                  <p class="primary-color fw-normal">10 products</p>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="cart-brand rounded-4 h-100">
+              <a href="products.html" class="text-decoration-none">
+              <div class="top">
+                <img
+                  src="/images/idk-hoodi.jpg"
+                  alt=""
+                  class="w-100 h-100 rounded-top-4 object-fit-cover"
+                />
+              </div>
+              <div class="bottom px-3">
+                <h4 class="mt-3 text-dark">IDK Hoodi</h4>
+                <p class="fw-normal text-secondary">
+                  100% genuine handmade products from local artisans. 100%
+                  genuine handmade products from local artisans
+                </p>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <i class="fa-solid fa-star fs-7 text-warning"></i>
+                    <span class="fw-normal primary-color">4.5</span>
+                  </div>
+                  <p class="primary-color fw-normal">10 products</p>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+          </div>
+
+          
+          
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container mt-5">
+        <h2 class="primary-color text-center">What Our Customer Say</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-12 col-sm-6 col-lg-3 cart-review">
+            <div class="review-cart rounded-4 pt-3 h-100">
+              <div>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-regular fa-star fs-7 text-warning"></i>
+            </div>
+            <p class="fw-normal text-secondary mt-2">100% genuine handmade products from local artisans. 100% genuine handmade products 
+from local artisans</p>
+              <div class="d-flex justify-content-between">
+                <h6 class="primary-color">Sophea Chan</h6>
+                <p class="fw-normal">26-03-01</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 cart-review">
+            <div class="review-cart rounded-4 pt-3 h-100">
+              <div>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-regular fa-star fs-7 text-warning"></i>
+            </div>
+            <p class="fw-normal text-secondary mt-2">100% genuine handmade products from local artisans. 100% genuine handmade products 
+from local artisans</p>
+              <div class="d-flex justify-content-between">
+                <h6 class="primary-color">Sophea Chan</h6>
+                <p class="fw-normal">26-03-01</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 cart-review">
+            <div class="review-cart rounded-4 pt-3 h-100">
+              <div>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-regular fa-star fs-7 text-warning"></i>
+            </div>
+            <p class="fw-normal text-secondary mt-2">100% genuine handmade products from local artisans. 100% genuine handmade products 
+from local artisans</p>
+              <div class="d-flex justify-content-between">
+                <h6 class="primary-color">Sophea Chan</h6>
+                <p class="fw-normal">26-03-01</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 cart-review">
+            <div class="review-cart rounded-4 pt-3 h-100">
+              <div>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-regular fa-star fs-7 text-warning"></i>
+            </div>
+            <p class="fw-normal text-secondary mt-2">100% genuine handmade products from local artisans. 100% genuine handmade products 
+from local artisans</p>
+              <div class="d-flex justify-content-between">
+                <h6 class="primary-color">Sophea Chan</h6>
+                <p class="fw-normal">26-03-01</p>
+              </div>
+            </div>
+            
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    
+
+    <footer class="mt-6">
+      <hr>
+      <div class="container mt-5 px-6">
+        <div class="row g-3">
+          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
+            <h5 class="primary-color">Services</h5>
+            <ul class="list-unstyled">
+              <li class="mt-3">
+                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Categories</a>
+              </li>
+              <li class="mt-3">
+                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Products</a>
+              </li>
+              <li class="mt-3">
+                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Locall Sellers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
+            <h5 class="primary-color">Contact Info</h5>
+            <ul class="list-unstyled">
+              <li class="mt-3">
+                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-location-dot"></i> 123 Street, Phnom Penh, Cambodia</a>
+              </li>
+              <li class="mt-3">
+                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-phone"></i> 099 943 618</a>
+              </li>
+              <li class="mt-3">
+                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-envelope"></i> info@LoukDo.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
+            <h5 class="primary-color">Follow Us</h5>
+            <ul class="list-unstyled">
+              <li class="mt-3">
+                  <div class="d-flex">
+                    <div class="social rounded-5 btn-outline-secondary-color">
+                      <a href="https://www.facebook.com/sistersofcode">
+                        <i class="fa-brands fa-facebook-f mt-2 ms-2"></i>
+                      </a>
+                    </div>
+                    <div class="social rounded-5 btn-outline-secondary-color mx-2">
+                      <a href="https://www.facebook.com/sistersofcode">
+                        <i class="fa-brands fa-instagram mt-2 ms-2 text-danger"></i>
+                      </a>
+                    </div>
+                    <div class="social rounded-5 btn-outline-secondary-color">
+                      <a href="https://www.facebook.com/sistersofcode">
+                        <i class="fa-brands fa-tiktok mt-2 ms-2 text-dark"></i>
+                      </a>
+                    </div>
+                  </div>
+              </li>
+              <li class="mt-3">
+                  <h5 class="primary-color">Newsletter</h5>
+                <p class="fw-normal">Subscribe to get special offers and updates</p>
+              </li>
+              <li class="mt-3">
+                <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="fw-normal mb-0">© 2026 LocalMarket. All rights reserved.</p>
+      <p class="fw-normal">Supporting Local Cambodian Artisans and Sellers</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+   
+  </body>
+</html>

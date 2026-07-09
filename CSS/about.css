@@ -1,0 +1,34 @@
+.top-box{
+    width: 60px;
+    height: 60px;
+}
+.shadows{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.fa-bullseye, .fa-heart-vision, .fa-award{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.fa-users{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.fa-heart-vision{
+    margin-top: 12px;
+}
+.fa-award{
+    margin-left: 0px;
+}
+.about-img{
+    height: 260px;
+    overflow: hidden;
+}
+.m-6{
+    margin-bottom: 100px!important;
+}
+/* @media (max-width:1024px) {
+   .about-img{
+     min-height: 260px;
+   }
+} */
