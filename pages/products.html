@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,17 +21,17 @@
       href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- AOS -->
+    <link rel="stylesheet" href="/CSS/brand.css">
+    <link rel="stylesheet" href="/CSS/product.css">
+     <!-- AOS -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     
-   
-  </head>
-  <body>
+    
+</head>
+<body>
     <div class="hero position-relative container" >
       <div class="row g-4">
         <div class="col-lg-7 col-md-7 col-sm-12">
-          <div class="container-fluid hero-image">
+          <div class="container-fluid hero-image h-hero-img hero-category-img">
         <div
           class="container position-absolute z-index-1 top-50 start-50 translate-middle"
         >
@@ -40,7 +40,7 @@
        
       </div>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-12 hero-img2" data-aos="fade-up"
+        <div class="col-lg-5 col-md-5 col-sm-12 hero-img2 h-hero-img" data-aos="fade-up"
     data-aos-once="false"
     data-aos-mirror="true">
           <div class="hero-content text-center">
@@ -54,16 +54,6 @@
               Support Cambodian artisans and find authentic <br />
               handmade products from local sellers
             </p>
-            <a
-              href="/pages/products.html"
-              class="btn text-white btn-lg rounded-4 me-3 btn-outline-secondary-color  btn-login btn-hero"
-              >Shop Now</a
-            >
-            <a
-              href="/pages/local-sellers.html"
-              class="btn btn-lg rounded-4 btn-outline-light btn-hero btn-hero-meet"
-              >Meet Seller</a
-            >
           </div>
         </div>
       </div>
@@ -73,140 +63,96 @@
        <div id="navbar"></div>
     </header>
 
-    <!-- section1 -->
+    
     <section>
-      <div class="container section-1 py-5 mt-5">
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="rounded-5 h-100 text-center p-4 cart">
-              <div class="top-icon mx-auto mb-4">
-                <i class="fa-solid fa-bag-shopping secondary-color fs-2"></i>
-              </div>
+      <div class="container section-4 mt-5">
+        <div
+    class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-4">
 
-              <h2 class="primary-color fs-3">Authentic Products</h2>
+    <h2 class="primary-color mb-0 w-100">
+        Products
+    </h2>
 
-              <p class="primary-color mb-0 fw-normal">
-                100% genuine handmade products from local artisans.
-              </p>
-            </div>
-          </div>
+    <form class="d-flex flex-column flex-sm-row gap-2 w-100 w-md-auto" id="searchForm">
 
-          <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="rounded-5 h-100 text-center p-4 cart">
-              <div class="top-icon mx-auto mb-4">
-                <i class="fa-solid fa-arrow-trend-up secondary-color fs-2"></i>
-              </div>
+    <input
+        id="searchInput"
+        class="form-control rounded-4"
+        type="search"
+        placeholder="Search Khmer product..."
+        aria-label="Search">
 
-              <h2 class="primary-color fs-3">Support Local</h2>
+    <button
+        class="btn btn-outline-primary-color primary-color rounded-4 px-4 search"
+        type="submit">
+        Search
+    </button>
 
-              <p class="primary-color mb-0 fw-normal">
-                Directly support Cambodian craftspeople and communities.
-              </p>
-            </div>
-          </div>
+</form>
 
-          <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="rounded-5 h-100 text-center p-4 cart">
-              <div class="top-icon mx-auto mb-4">
-                <i class="fa-regular fa-star secondary-color fs-2"></i>
-              </div>
-
-              <h2 class="primary-color fs-3">Quality Guaranteed</h2>
-
-              <p class="primary-color mb-0 fw-normal">
-                Every product is carefully vetted for quality.
-              </p>
-            </div>
-          </div>
-        </div>
+</div>
+<div class="row g-3 mb-5">
+    <div class="col-12 col-md-4 dropdown ">
+      <div class="btn-outline-primary-color rounded-4">
+        <button class="filter-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="categoryLabel">All Categories</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-custom">
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="all">All Categories</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Food">Food</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Dessert">Dessert</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Spices">Spices</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Clothes">Clothes</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Jewelry">Jewelry</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Grains">Grains</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Souvenir">Souvenir</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Beauty">Beauty</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Plants">Plants</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Miedicine">Miedicine</a></li>
+        <li><a class="dropdown-item filter-category" href="#" data-target="categoryLabel" data-value="Kitchen">Kitchen</a></li>
+      </ul>
       </div>
-    </section>
+    </div>
 
-    <!-- section2 -->
-    <section>
-      <div class="container section-2 mt-5">
-        <div class="d-flex justify-content-between mb-5">
-          <h2 class="primary-color">Categories</h2>
-          <a
-            href="/pages/categories.html"
-            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all p-view-all"
-          >
-            View all
-          </a>
+    <div class="col-12 col-md-4 dropdown">
+        <div class="btn-outline-primary-color rounded-4">
+            <button class="filter-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="priceLabel">Price Range</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-custom">
+        <li><a class="dropdown-item filter-price"" href="#" data-target="priceLabel" data-value="all">All Price</a></li>
+        <li><a class="dropdown-item filter-price"" href="#" data-target="priceLabel" data-value="10">Under $10</a></li>
+        <li><a class="dropdown-item filter-price"" href="#" data-target="priceLabel" data-value="25">$10 - $25</a></li>
+        <li><a class="dropdown-item filter-price"" href="#" data-target="priceLabel" data-value="50">$25 - $50</a></li>
+        <li><a class="dropdown-item filter-price"" href="#" data-target="priceLabel" data-value="51">$50+</a></li>
+      </ul>
         </div>
+      
+    </div>
 
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-             <a href="/pages/products.html">
-               <img src="/images/food.jpg" alt="" class="w-100 h-100">
-             </a>
-            </div>
-            <h5 class="mt-3 primary-color">Food</h5>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-              <a href="/pages/products.html">
-                 <img src="/images/Dessert.webp" alt="" class="w-100 h-100">
-              </a>
-            </div>
-            <h5 class="mt-3 primary-color">Dessert</h5>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-              <a href="/pages/products.html">
-                 <img src="/images/drink.webp" alt="" class="w-100 h-100">
-              </a>
-            </div>
-            <h5 class="mt-3 primary-color">Drink</h5>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-              <a href="/pages/products.html">
-                 <img src="/images/spices.avif" alt="" class="w-100 h-100">
-              </a>
-            </div>
-            <h5 class="mt-3 primary-color">Spices</h5>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-              <a href="/pages/products.html">
-                  <img src="/images/clothes.avif" alt="" class="w-100 h-100">
-              </a>
-            </div>
-            <h5 class="mt-3 primary-color">Clothes</h5>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-            <div class="category-box">
-              <a href="/pages/products.html">
-                  <img src="/images/jewelry.png" alt="" class="w-100 h-100">
-              </a>
-            </div>
-            <h5 class="mt-3 primary-color">Jewelry</h5>
-          </div>
-         
-         
+    <div class="col-12 col-md-4 dropdown">
+        <div class="btn-outline-primary-color rounded-4">
+            <button class="filter-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="ratingLabel">All Rating</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-custom">
+        <li><a class="dropdown-item filter-rating" href="#" data-target="ratingLabel" data-value="0">All Rating</a></li>
+        <li><a class="dropdown-item filter-rating" href="#" data-target="ratingLabel" data-value="4">4 Stars & Up</a></li>
+        <li><a class="dropdown-item filter-rating" href="#" data-target="ratingLabel" data-value="3">3 Stars & Up</a></li>
+        <li><a class="dropdown-item filter-rating" href="#" data-target="ratingLabel" data-value="2">2 Stars & Up</a></li>
+      </ul>
         </div>
-      </div>
-    </section>
+      
+    </div>
+  </div>
 
-    <!-- section3 -->
-    <section>
-      <div class="container section-3 mt-6">
-        <div class="d-flex justify-content-between">
-          <h2 class="primary-color">Products</h2>
-           <a
-            href="/pages/products.html"
-            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all p-view-all"
-          >
-            View all
-          </a>
-        </div>
         <div class="row g-4 mt-4">
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 product-item" data-category="Clothes"
+     data-price="15"
+     data-rating="4.5">
             <div class="product-cart rounded-4 h-100 px-2">
               <div class="top">
               <img
@@ -246,7 +192,9 @@
             </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 product-item" data-category="Spices"
+     data-price="3"
+     data-rating="4">
             <div class="product-cart rounded-4 h-100 px-2">
               <div class="top">
               <img
@@ -263,7 +211,7 @@
               <div class="d-flex justify-content-between">
                 <div>
                   <i class="fa-solid fa-star fs-7 text-warning"></i>
-                  <span class="fw-normal primary-color">4.5</span>
+                  <span class="fw-normal primary-color">4</span>
                 </div>
                 <h5 class="primary-color">$3.00</h5>
               </div>
@@ -286,7 +234,9 @@
             </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 product-item" data-category="Drink"
+     data-price="0.5"
+     data-rating="4.5">
             <div class="product-cart rounded-4 h-100 px-2">
               <div class="top">
               <img
@@ -326,7 +276,9 @@
             </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 product-item" data-category="Jewelry"
+     data-price="40"
+     data-rating="3.5">
             <div class="product-cart rounded-4 h-100 px-2">
               <div class="top">
               <img
@@ -372,139 +324,8 @@
       </div>
     </section>
 
-    
-  <!-- section4 -->
-    <section>
-      <div class="container section-4 mt-6">
-        <div class="d-flex justify-content-between">
-          <h2 class="primary-color">Khmer Brands</h2>
-           <a
-            href="/pages/local-sellers.html"
-            class="btn btn-outline-primary-color primary-color px-4 rounded-4 btn-view-all p-view-all"
-          >
-            View all
-          </a>
-        </div>
-        <div class="row g-4 mt-4">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cart-brand rounded-4 h-100">
-              <a href="/pages/products.html" class="text-decoration-none">
-              <div class="top">
-                <img
-                  src="/images/Ringacam.jpg"
-                  alt=""
-                  class="w-100 h-100 rounded-top-4 object-fit-cover"
-                />
-              </div>
-              <div class="bottom px-3">
-                <h4 class="mt-3 text-dark">Ringacam</h4>
-                <p class="fw-normal text-secondary">
-                 RINGACAM is a natural Agri-processing enterprise in Cambodia established 2016 with the Ministry of Industry, Science, Technology & Innovation.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <i class="fa-solid fa-star fs-7 text-warning"></i>
-                    <span class="fw-normal primary-color">4.5</span>
-                  </div>
-                  <p class="primary-color fw-normal">10 products</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cart-brand rounded-4 h-100">
-              <a href="/pages/products.html" class="text-decoration-none">
-              <div class="top">
-                <img
-                  src="/images/Maggy's Boutique.avif"
-                  alt=""
-                  class="w-100 h-100 rounded-top-4 object-fit-cover"
-                />
-              </div>
-              <div class="bottom px-3">
-                <h4 class="mt-3 text-dark">Maggy's Boutique</h4>
-                <p class="fw-normal text-secondary">
-                  Our goal is to provide our customers with high-quality, timeless pieces that showcase the beauty, pride, heritage and craftsmanship of our region.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <i class="fa-solid fa-star fs-7 text-warning"></i>
-                    <span class="fw-normal primary-color">4.5</span>
-                  </div>
-                  <p class="primary-color fw-normal">10 products</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cart-brand rounded-4 h-100">
-              <a href="/pages/products.html" class="text-decoration-none">
-              <div class="top">
-                <img
-                  src="/images/Cambodia Coca-Cola.jpg"
-                  alt=""
-                  class="w-100 h-100 rounded-top-4 object-fit-cover"
-                />
-              </div>
-              <div class="bottom px-3">
-                <h4 class="mt-3 text-dark">Cambodia Coca-Cola</h4>
-                <p class="fw-normal text-secondary">
-                  Coca-Cola in Cambodia is produced and distributed by the Cambodia Beverage Company (CBC), operating under Swire Coca-Cola located in the Phnom Penh.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <i class="fa-solid fa-star fs-7 text-warning"></i>
-                    <span class="fw-normal primary-color">4.5</span>
-                  </div>
-                  <p class="primary-color fw-normal">10 products</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cart-brand rounded-4 h-100">
-              <a href="/pages/products.html" class="text-decoration-none">
-              <div class="top">
-                <img
-                  src="/images/idk-hoodi.jpg"
-                  alt=""
-                  class="w-100 h-100 rounded-top-4 object-fit-cover"
-                />
-              </div>
-              <div class="bottom px-3">
-                <h4 class="mt-3 text-dark">IDK Hoodi</h4>
-                <p class="fw-normal text-secondary">
-                  100% genuine handmade products from local artisans. 100%
-                  genuine handmade products from local artisans perfect for any fashion lover.
-                </p>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <i class="fa-solid fa-star fs-7 text-warning"></i>
-                    <span class="fw-normal primary-color">4.5</span>
-                  </div>
-                  <p class="primary-color fw-normal">10 products</p>
-                </div>
-              </div>
-            </a>
-            </div>
-            
-          </div>
 
-          
-          
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="container mt-6">
+ <section class="container mt-6">
     <h2 class="primary-color text-center mb-4">
         What Our Customer Say
     </h2>
@@ -662,15 +483,16 @@
        <div id="footer"></div>
       
     </footer>
-    
 
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="/JS/home.js"></script>
+     <script src="/JS/home.js"></script>
       <script src="/JS/components.js"></script>
+      <script src="/JS/product.js"></script>
     <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -681,6 +503,5 @@
     mirror: true
   });
 </script>
-   
-  </body>
+</body>
 </html>
