@@ -188,9 +188,9 @@
                
 
 
-             <a href="checkout2.html" class="text-decoration-none btn btn-outline-secondary-color secondary-color rounded-4 px-4 w-100 my-4">
-                 Continue
-              </a>
+              <button id="cod-continue-btn" type="button" class="text-decoration-none btn btn-outline-secondary-color secondary-color rounded-4 px-4 w-100 my-4">
+                  Continue
+               </button>
               </form>
             </div>
           </div>
@@ -303,5 +303,24 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const payment = {
+          method: 'Cash on Delivery',
+          fullName: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).fullName : '',
+          email: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).email : '',
+          phone: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).phone : ''
+        };
+        localStorage.setItem('loukdo-payment', JSON.stringify(payment));
+
+        const continueBtn = document.getElementById('cod-continue-btn');
+        if (continueBtn) {
+          continueBtn.addEventListener('click', function() {
+            window.location.href = 'checkout2.html';
+          });
+        }
+      });
+    </script>
   </body>
 </html>

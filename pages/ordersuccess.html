@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Success</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/contact.css" />
+    <link rel="stylesheet" href="/CSS/checkout.css">
+    <link rel="stylesheet" href="/CSS/checkout2.css">
+  </head>
+  <body>
+     <header class="position-absolute top-0 start-0 w-100 z-3">
+       <div id="navbar"></div>
+    </header>
+
+   <section>
+    <div class="container mt-7 text-center">
+        <div class="success-bg mb-3">
+            <img src="/images/success.png" alt="" class="w-100 h-100">
+        </div>
+        <h2 class="primary-color">Purchase Successfully</h2>
+        <p class="fw-normal primary-color">Thanks for surpporting Cambodian product.</p>
+    </div>
+   </section>
+
+
+
+    
+
+     <footer class="mt-6">
+       <div id="footer"></div>
+      
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+     <script src="/JS/components.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const shipping = JSON.parse(localStorage.getItem('loukdo-shipping') || '{}');
+        const payment = JSON.parse(localStorage.getItem('loukdo-payment') || '{}');
+        const cartItems = JSON.parse(localStorage.getItem('loukdo-cart') || '[]');
+
+        if (shipping.fullName) {
+          document.getElementById('review-fullname').textContent = shipping.fullName;
+          document.getElementById('review-email').textContent = shipping.email;
+          document.getElementById('review-phone').textContent = shipping.phone;
+          document.getElementById('review-location').textContent = shipping.address + ', ' + shipping.province;
+          document.getElementById('review-delivery').textContent = shipping.delivery;
+        }
+
+        if (payment.method) {
+          document.getElementById('review-payment').textContent = payment.method;
+        }
+
+        const itemsContainer = document.getElementById('review-items');
+        if (itemsContainer && cartItems.length > 0) {
+          let subtotal = 0;
+          const markup = cartItems.map((item, index) => {
+            const lineTotal = item.price * item.quantity;
+            subtotal += lineTotal;
+            return `
+              <div class="row mt-3 g-2">
+                <div class="col-3 img-cart">
+                  <img src="${item.image}" alt="" class="w-100 h-100 object-fit-cover rounded-4">
+                </div>
+                <div class="col-9 ps-4">
+                  <div class="d-flex justify-content-between">
+                    <h4 class="primary-color">${item.name}</h4>
+                    <p class="fw-normal primary-color">$${item.price.toFixed(2)}</p>
+                  </div>
+                  <p class="fw-normal primary-color">Qty: ${item.quantity}</p>
+                </div>
+              </div>
+            `;
+          }).join('');
+          itemsContainer.innerHTML = markup;
+        }
+
+        const placeOrderBtn = document.getElementById('place-order-btn');
+        if (placeOrderBtn) {
+          placeOrderBtn.addEventListener('click', function() {
+            const order = {
+              shipping: shipping,
+              payment: payment,
+              items: cartItems,
+              subtotal: '$' + cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2),
+              total: '$' + (cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 1).toFixed(2),
+              date: new Date().toISOString()
+            };
+
+            localStorage.setItem('loukdo-last-order', JSON.stringify(order));
+            localStorage.removeItem('loukdo-cart');
+            localStorage.removeItem('loukdo-cart-count');
+            localStorage.removeItem('loukdo-shipping');
+            localStorage.removeItem('loukdo-payment');
+            window.location.href = 'order.html';
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

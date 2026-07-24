@@ -25,107 +25,12 @@
     <link rel="stylesheet" href="/CSS/checkout.css">
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="/index.html">
-            <img
-              src="/images/logo.png"
-              alt="Logo"
-              width="150"
-              class="img-fluid"
-            />
-          </a>
-
-          <!-- Mobile Toggle -->
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarMenu"
-          >
-            <ul class="navbar-nav align-items-lg-center mb-3 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="categories.html">
-                  Categories
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="products.html">
-                  Products
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white px-lg-3"
-                  href="local-sellers.html"
-                >
-                  Local Seller
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="about.html">
-                  About
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="contact.html">
-                  Contact
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="wishlist.html">
-                  <i class="fa-solid fa-heart"></i>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="order.html">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white px-lg-3 text-decoration-none"
-                  href=""
-                >
-                  <img src="/images/kh.svg" alt="" class="flag" />
-                  <span>|</span>
-                  <img src="/images/eg.svg" alt="" class="flag" />
-                </a>
-              </li>
-            </ul>
-
-            <a
-              href="login.html"
-              class="btn btn-outline-primary rounded-pill ms-lg-3 px-4"
-            >
-              Login
-            </a>
-          </div>
-        </div>
-      </nav>
+    <header class="position-absolute top-0 start-0 w-100 z-3">
+       <div id="navbar"></div>
     </header>
 
     <section>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-7 mb-5">
         <h1 class="primary-color">Checkout</h1>
 
        <div class="checkout-stepper mt-3">
@@ -177,12 +82,13 @@
                   <label for="subject" class="form-label primary-color">
                     Full Name
                   </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullname"
-                    placeholder="Full Name"
-                  />
+                   <input
+                     type="text"
+                     class="form-control"
+                     id="fullname"
+                     placeholder="Full Name"
+                     required
+                   />
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6 mb-3">
@@ -192,12 +98,13 @@
                     >
                       Your Email
                     </label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      placeholder="Enter your email"
-                    />
+                     <input
+                       type="email"
+                       class="form-control"
+                       id="exampleInputEmail1"
+                       placeholder="Enter your email"
+                       required
+                     />
                   </div>
                   <div class="col-12 col-md-6 mb-3">
                     <label
@@ -206,12 +113,13 @@
                     >
                       Phone
                     </label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="exampleInputPhone"
-                      placeholder="Enter your phone"
-                    />
+                     <input
+                       type="tel"
+                       class="form-control"
+                       id="exampleInputPhone"
+                       placeholder="Enter your phone"
+                       required
+                     />
                   </div>
                 </div>
                 <div class="row">
@@ -222,19 +130,20 @@
                     >
                       Address
                     </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputAddress"
-                      placeholder="Enter your address"
-                    />
+                     <input
+                       type="text"
+                       class="form-control"
+                       id="exampleInputAddress"
+                       placeholder="Enter your address"
+                       required
+                     />
                   </div>
                   <div class="col-12 col-md-6 mb-3">
                     <label for="province" class="form-label primary-color">
         City / Province
     </label>
 
-    <select class="form-select" id="province" name="province">
+    <select class="form-select" id="province" name="province" required>
         <option selected disabled>Select your city/province</option>
         <option value="Banteay Meanchey">Banteay Meanchey</option>
         <option value="Battambang">Battambang</option>
@@ -268,8 +177,8 @@
                   <label for="subject" class="form-label primary-color">
                     Delivery
                   </label>
-                 <select class="form-select" id="province" name="province">
-        <option selected disabled>Select devery company</option>
+                  <select class="form-select" id="delivery" name="delivery" required>
+         <option selected disabled>Select devery company</option>
         <option value="Banteay Meanchey">VIT</option>
         <option value="Battambang">J&T</option>
        
@@ -278,9 +187,9 @@
                 </div>
 
 
-              <a href="checkout1.html" class="text-decoration-none btn btn-outline-secondary-color secondary-color rounded-4 px-4 w-100 my-4">
+              <button type="submit" class="text-decoration-none btn btn-outline-secondary-color secondary-color rounded-4 px-4 w-100 my-4">
                  Continue
-              </a>
+              </button>
 
               </form>
             </div>
@@ -314,79 +223,9 @@
       </div>
     </section>
 
-    <footer class="mt-6">
-      <hr>
-      <div class="container mt-5 px-6">
-        <div class="row g-3">
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Services</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Categories</a>
-              </li>
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Products</a>
-              </li>
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Locall Sellers</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Contact Info</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-location-dot"></i> 123 Street, Phnom Penh, Cambodia</a>
-              </li>
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-phone"></i> 099 943 618</a>
-              </li>
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-envelope"></i> info@LoukDo.com</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Follow Us</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                  <div class="d-flex">
-                    <div class="social rounded-5 btn-outline-secondary-color">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-facebook-f mt-2 ms-2"></i>
-                      </a>
-                    </div>
-                    <div class="social rounded-5 btn-outline-secondary-color mx-2">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-instagram mt-2 ms-2 text-danger"></i>
-                      </a>
-                    </div>
-                    <div class="social rounded-5 btn-outline-secondary-color">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-tiktok mt-2 ms-2 text-dark"></i>
-                      </a>
-                    </div>
-                  </div>
-              </li>
-              <li class="mt-3">
-                  <h5 class="primary-color">Newsletter</h5>
-                <p class="fw-normal">Subscribe to get special offers and updates</p>
-              </li>
-              <li class="mt-3">
-                <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="text-center">
-        <p class="fw-normal mb-0">© 2026 LocalMarket. All rights reserved.</p>
-      <p class="fw-normal">Supporting Local Cambodian Artisans and Sellers</p>
-      </div>
+   <footer class="mt-6">
+       <div id="footer"></div>
+      
     </footer>
 
     <script
@@ -394,5 +233,31 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-  </body>
+     <script src="/JS/components.js"></script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const form = document.querySelector('form');
+          if (form) {
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              if (form.checkValidity()) {
+                const shipping = {
+                  fullName: document.getElementById('fullname')?.value || '',
+                  email: document.getElementById('exampleInputEmail1')?.value || '',
+                  phone: document.getElementById('exampleInputPhone')?.value || '',
+                  address: document.getElementById('exampleInputAddress')?.value || '',
+                  province: document.getElementById('province')?.value || '',
+                  delivery: document.getElementById('delivery')?.value || ''
+                };
+                localStorage.setItem('loukdo-shipping', JSON.stringify(shipping));
+                window.location.href = 'checkout1.html';
+              } else {
+                form.reportValidity();
+              }
+            });
+          }
+        });
+      </script>
+   </body>
 </html>

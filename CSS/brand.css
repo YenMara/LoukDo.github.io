@@ -39,14 +39,25 @@
     }
 
 }
-@media (width:820px){
+@media (max-width:820px){
+
+    form[role="search"]{
+        width:100%;
+    }
+
+    form[role="search"] input,
+    form[role="search"] button{
+        width:100%;
+    }
 
     .search{
-        width: 100px;
+        width: 100%;
+        margin-top: 8px;
     }
-     .form-control{
-       height: 50px;
-       margin-top: 10px;
+
+    .form-control{
+        height: auto;
+        margin-top: 0;
     }
 
 }

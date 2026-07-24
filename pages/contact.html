@@ -85,6 +85,7 @@
                         class="form-control"
                         id="exampleInputName"
                         placeholder="Enter your name"
+                        required
                     >
                 </div>
 
@@ -97,6 +98,7 @@
                         class="form-control"
                         id="exampleInputEmail1"
                         placeholder="Enter your email"
+                        required
                     >
                 </div>
             </div>
@@ -111,6 +113,7 @@
                     class="form-control"
                     id="subject"
                     placeholder="Subject"
+                    required
                 >
             </div>
 
@@ -121,6 +124,7 @@
         class="form-control"
         rows="5"
         placeholder="Write your message"
+        required
     ></textarea>
 </div>
 
@@ -180,5 +184,22 @@
     ></script>
 
     <script src="/JS/components.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (form.checkValidity()) {
+              form.reset();
+              alert('Message sent successfully!');
+            } else {
+              form.reportValidity();
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

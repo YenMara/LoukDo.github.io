@@ -99,3 +99,8 @@
         font-size:15px;
     }
 }
+.success-bg{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
