@@ -15,7 +15,7 @@
 }
 .hero-image{
     height: 600px;
-    background-image: url('/images/hero-img2.jpg');
+    background-image: url('../images/hero-img2.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 30px 220px;
@@ -24,7 +24,7 @@
 }
 .hero-img2{
     height: 600px;
-    background-image: url('/images/hero1.jpg');
+    background-image: url('../images/hero1.jpg');
     background-size: cover;
     background-position: right;
     border-radius: 220px 30px;

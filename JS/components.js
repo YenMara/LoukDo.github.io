@@ -1,10 +1,19 @@
+function getBasePath() {
+    const loc = window.location.pathname;
+    return loc.substring(0, loc.lastIndexOf('/') + 1);
+}
+
 async function loadComponent(id, file) {
     const element = document.getElementById(id);
 
     if (!element) return;
 
-    const response = await fetch(file);
-    const data = await response.text();
+    const base = getBasePath();
+    const url = base + file.replace(/^\//, '');
+    const response = await fetch(url);
+    let data = await response.text();
+
+    data = data.replace(/(href|src)="\/(?!\/)/g, '$1="' + base);
 
     element.innerHTML = data;
 }
@@ -44,7 +53,7 @@ function getProductFromTrigger(trigger) {
             name: fallbackName.replace(/^Add to Cart/i, "Product"),
             description: "Handmade product",
             price: 0,
-            image: "/images/Clothes.jpg",
+            image: getBasePath() + "images/Clothes.jpg",
             quantity: 1
         };
     }
@@ -53,7 +62,7 @@ function getProductFromTrigger(trigger) {
     const description = card.querySelector("p")?.textContent?.trim() || "Handmade product";
     const priceText = card.querySelector("h5, .price, .fw-bold")?.textContent?.trim() || "0";
     const price = Number.parseFloat((priceText.match(/[\d.]+/) || [0])[0]) || 0;
-    const image = card.querySelector("img")?.getAttribute("src") || "/images/Clothes.jpg";
+    const image = card.querySelector("img")?.getAttribute("src") || getBasePath() + "images/Clothes.jpg";
 
     return {
         name,
@@ -124,13 +133,13 @@ function handleWishlistClick(event) {
         saveWishlistItems(items);
     }
 
-    const targetHref = trigger.getAttribute("href") || "/pages/wishlist.html";
+    const targetHref = trigger.getAttribute("href") || "pages/wishlist.html";
     window.location.href = targetHref;
 }
 
 async function initComponents() {
-    await loadComponent("navbar", "/component/navbar.html");
-    await loadComponent("footer", "/component/footer.html");
+    await loadComponent("navbar", "component/navbar.html");
+    await loadComponent("footer", "component/footer.html");
 
     updateCartBadge();
     document.addEventListener("click", handleAddToCartClick);
