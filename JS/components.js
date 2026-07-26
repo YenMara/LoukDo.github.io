@@ -1,5 +1,9 @@
 function getBasePath() {
     const loc = window.location.pathname;
+    const pagesIndex = loc.indexOf('/pages/');
+    if (pagesIndex !== -1) {
+        return loc.substring(0, pagesIndex + 1);
+    }
     return loc.substring(0, loc.lastIndexOf('/') + 1);
 }
 
