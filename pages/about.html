@@ -21,7 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="/CSS/about.css">
+    
+
     
   </head>
   <body>
@@ -63,7 +66,9 @@
     <section>
         <div class="container m-6">
             <div class="row g-3 mt-5">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <div class="rounded-4 h-100 shadows d-flex">
                        <div class="vision-img bg-primary">
                         <img src="/images/hero-category.jpg" alt="" class="w-100 h-100 object-fit-cover">
@@ -74,7 +79,10 @@
                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
                     <div class="rounded-4 h-100 shadows d-flex">
                        <div class="vision-img bg-primary">
                         <img src="/images/product-hero.jpg" alt="" class="w-100 h-100 object-fit-cover">
@@ -90,7 +98,8 @@
         </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <div class="container-fluid our-story position-relative text-center">
         <div class="overlay">
             <h2 class="text-white">Our Story</h2>
@@ -104,7 +113,8 @@ Today, LocalMarket has grown into a vibrant community of sellers and customers, 
 
     
 
-    <section>
+    <section data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
         <div class="container mt-6 m-6">
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-4">
@@ -132,7 +142,8 @@ Today, LocalMarket has grown into a vibrant community of sellers and customers, 
         </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
         <div class="container mt-5">
             <h2 class="text-center primary-color mb-4">Our Values</h2>
             <div class="row g-4">
@@ -164,7 +175,8 @@ Today, LocalMarket has grown into a vibrant community of sellers and customers, 
         </div>
     </section>
 
-     <footer class="mt-6">
+     <footer class="mt-6" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
        <div id="footer"></div>
       
     </footer>
@@ -176,5 +188,15 @@ Today, LocalMarket has grown into a vibrant community of sellers and customers, 
     ></script>
 
       <script src="/JS/components.js"></script>
+          <!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
   </body>
 </html>

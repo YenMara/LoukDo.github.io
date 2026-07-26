@@ -37,6 +37,13 @@
         </div>
         <h2 class="primary-color">Purchase Successfully</h2>
         <p class="fw-normal primary-color">Thanks for surpporting Cambodian product.</p>
+        
+        <div id="order-details"></div>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="order.html" class="btn btn-outline-secondary-color secondary-color rounded-4 px-4">View Order</a>
+            <a href="products.html" class="btn btn-outline-primary-color primary-color rounded-4 px-4">Continue Shopping</a>
+        </div>
     </div>
    </section>
 
@@ -56,69 +63,6 @@
     ></script>
      <script src="/JS/components.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const shipping = JSON.parse(localStorage.getItem('loukdo-shipping') || '{}');
-        const payment = JSON.parse(localStorage.getItem('loukdo-payment') || '{}');
-        const cartItems = JSON.parse(localStorage.getItem('loukdo-cart') || '[]');
-
-        if (shipping.fullName) {
-          document.getElementById('review-fullname').textContent = shipping.fullName;
-          document.getElementById('review-email').textContent = shipping.email;
-          document.getElementById('review-phone').textContent = shipping.phone;
-          document.getElementById('review-location').textContent = shipping.address + ', ' + shipping.province;
-          document.getElementById('review-delivery').textContent = shipping.delivery;
-        }
-
-        if (payment.method) {
-          document.getElementById('review-payment').textContent = payment.method;
-        }
-
-        const itemsContainer = document.getElementById('review-items');
-        if (itemsContainer && cartItems.length > 0) {
-          let subtotal = 0;
-          const markup = cartItems.map((item, index) => {
-            const lineTotal = item.price * item.quantity;
-            subtotal += lineTotal;
-            return `
-              <div class="row mt-3 g-2">
-                <div class="col-3 img-cart">
-                  <img src="${item.image}" alt="" class="w-100 h-100 object-fit-cover rounded-4">
-                </div>
-                <div class="col-9 ps-4">
-                  <div class="d-flex justify-content-between">
-                    <h4 class="primary-color">${item.name}</h4>
-                    <p class="fw-normal primary-color">$${item.price.toFixed(2)}</p>
-                  </div>
-                  <p class="fw-normal primary-color">Qty: ${item.quantity}</p>
-                </div>
-              </div>
-            `;
-          }).join('');
-          itemsContainer.innerHTML = markup;
-        }
-
-        const placeOrderBtn = document.getElementById('place-order-btn');
-        if (placeOrderBtn) {
-          placeOrderBtn.addEventListener('click', function() {
-            const order = {
-              shipping: shipping,
-              payment: payment,
-              items: cartItems,
-              subtotal: '$' + cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2),
-              total: '$' + (cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 1).toFixed(2),
-              date: new Date().toISOString()
-            };
-
-            localStorage.setItem('loukdo-last-order', JSON.stringify(order));
-            localStorage.removeItem('loukdo-cart');
-            localStorage.removeItem('loukdo-cart-count');
-            localStorage.removeItem('loukdo-shipping');
-            localStorage.removeItem('loukdo-payment');
-            window.location.href = 'order.html';
-          });
-        }
-      });
-    </script>
+    <script src="/JS/orderSuccess.js"></script>
   </body>
 </html>

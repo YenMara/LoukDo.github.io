@@ -24,8 +24,10 @@
 
     <!-- AOS -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="/CSS/brand.css">
     <link rel="stylesheet" href="/CSS/product.css">
+
 
 </head>
 <body>
@@ -34,7 +36,9 @@
     </header>
 
     
-    <section>
+    <section data-aos="fade-up"
+    data-aos-once="false"
+    data-aos-mirror="true">
       <div class="container section-4 mt-7">
         <h2 class="primary-color mb-0 w-100">My Wishlist</h2>
         <p id="wishlist-count" class="fw-normal">0 items saved</p>
@@ -43,7 +47,8 @@
       </div>
     </section>
 
-    <footer class="mt-6">
+    <footer class="mt-6" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
        <div id="footer"></div>
       
     </footer>
@@ -57,6 +62,13 @@
     ></script>
      <script src="/JS/components.js"></script>
     <script src="/JS/wishlist.js"></script>
-    
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
 </body>
 </html>

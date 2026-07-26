@@ -23,13 +23,16 @@
     />
     <link rel="stylesheet" href="/CSS/contact.css" />
     <link rel="stylesheet" href="/CSS/checkout.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
   </head>
   <body>
     <header class="position-absolute top-0 start-0 w-100 z-3">
        <div id="navbar"></div>
     </header>
 
-    <section>
+    <section  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <div class="container mt-7 mb-5">
         <h1 class="primary-color">Checkout</h1>
 
@@ -69,7 +72,8 @@
 
 
 
-    <section>
+    <section  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <div class="container">
         <div class="row g-3">
           <div class="col-12 col-lg-8 col-md-6">
@@ -234,7 +238,8 @@
       </div>
     </section>
 
-    <footer class="mt-6">
+    <footer class="mt-6" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
        <div id="footer"></div>
       
     </footer>
@@ -281,5 +286,15 @@
         }
       });
     </script>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
   </body>
 </html>

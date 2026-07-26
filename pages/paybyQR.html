@@ -24,108 +24,16 @@
     <link rel="stylesheet" href="/CSS/contact.css" />
     <link rel="stylesheet" href="/CSS/checkout.css">
     <link rel="stylesheet" href="/CSS/paybyQR.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="/index.html">
-            <img
-              src="/images/logo.png"
-              alt="Logo"
-              width="150"
-              class="img-fluid"
-            />
-          </a>
-
-          <!-- Mobile Toggle -->
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarMenu"
-          >
-            <ul class="navbar-nav align-items-lg-center mb-3 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="categories.html">
-                  Categories
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="products.html">
-                  Products
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white px-lg-3"
-                  href="local-sellers.html"
-                >
-                  Local Seller
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="about.html">
-                  About
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="contact.html">
-                  Contact
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="wishlist.html">
-                  <i class="fa-solid fa-heart"></i>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white px-lg-3" href="order.html">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white px-lg-3 text-decoration-none"
-                  href=""
-                >
-                  <img src="/images/kh.svg" alt="" class="flag" />
-                  <span>|</span>
-                  <img src="/images/eg.svg" alt="" class="flag" />
-                </a>
-              </li>
-            </ul>
-
-            <a
-              href="login.html"
-              class="btn btn-outline-primary rounded-pill ms-lg-3 px-4"
-            >
-              Login
-            </a>
-          </div>
-        </div>
-      </nav>
+     <header class="position-absolute top-0 start-0 w-100 z-3">
+       <div id="navbar"></div>
     </header>
 
-    <section>
+    <section  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <div class="container mt-5 mb-5">
         <h1 class="primary-color">Checkout</h1>
 
@@ -165,7 +73,8 @@
 
 
 
-    <section>
+    <section  data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <div class="container">
         <div class="row g-3">
           <div class="col-12 col-lg-8 col-md-6">
@@ -227,103 +136,28 @@
     </section>
 
 
-    <footer class="mt-6">
-      <hr>
-      <div class="container mt-5 px-6">
-        <div class="row g-3">
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Services</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Categories</a>
-              </li>
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Products</a>
-              </li>
-              <li class="mt-3">
-                <a href="categories.html" class="text-decoration-none fw-normal primary-color">Locall Sellers</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Contact Info</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-location-dot"></i> 123 Street, Phnom Penh, Cambodia</a>
-              </li>
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-phone"></i> 099 943 618</a>
-              </li>
-              <li class="mt-3">
-                <a href="" class="text-decoration-none fw-normal primary-color"><i class="fa-solid fa-envelope"></i> info@LoukDo.com</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 w-col">
-            <h5 class="primary-color">Follow Us</h5>
-            <ul class="list-unstyled">
-              <li class="mt-3">
-                  <div class="d-flex">
-                    <div class="social rounded-5 btn-outline-secondary-color">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-facebook-f mt-2 ms-2"></i>
-                      </a>
-                    </div>
-                    <div class="social rounded-5 btn-outline-secondary-color mx-2">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-instagram mt-2 ms-2 text-danger"></i>
-                      </a>
-                    </div>
-                    <div class="social rounded-5 btn-outline-secondary-color">
-                      <a href="https://www.facebook.com/sistersofcode">
-                        <i class="fa-brands fa-tiktok mt-2 ms-2 text-dark"></i>
-                      </a>
-                    </div>
-                  </div>
-              </li>
-              <li class="mt-3">
-                  <h5 class="primary-color">Newsletter</h5>
-                <p class="fw-normal">Subscribe to get special offers and updates</p>
-              </li>
-              <li class="mt-3">
-                <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="text-center">
-        <p class="fw-normal mb-0">© 2026 LocalMarket. All rights reserved.</p>
-      <p class="fw-normal">Supporting Local Cambodian Artisans and Sellers</p>
-      </div>
+     <footer class="mt-6" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+       <div id="footer"></div>
+      
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="/JS/components.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const payment = {
-          method: 'KHQR',
-          fullName: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).fullName : '',
-          email: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).email : '',
-          phone: localStorage.getItem('loukdo-shipping') ? JSON.parse(localStorage.getItem('loukdo-shipping')).phone : ''
-        };
-        localStorage.setItem('loukdo-payment', JSON.stringify(payment));
+    <script src="/JS/paybyQR.js"></script>
 
-        const continueBtn = document.getElementById('qr-continue-btn');
-        if (continueBtn) {
-          continueBtn.addEventListener('click', function() {
-            window.location.href = 'checkout2.html';
-          });
-        }
-      });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
   </body>
 </html>

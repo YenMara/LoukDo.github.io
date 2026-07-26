@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="/CSS/contact.css" />
   </head>
   <body>
@@ -42,25 +43,27 @@
     <section>
       <div class="container">
         <div class="row g-3">
-          <div class="col-sm-12 col-lg-4 col-md-6">
+          <div class="col-sm-12 col-lg-4 col-md-6" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
             <div class="shadows rounded-4 p-4 px-5">
               <h2 class="primary-color">Get in Touch</h2>
               <div class="d-flex my-3">
-                <i class="fa-regular fa-envelope pt-2 secondary-color me-3"></i>
+                <i class="fa-regular fa-envelope pt-2 secondary-color me-3 icon"></i>
                 <div>
                   <h5>Email</h5>
                   <p class="fw-normal">info@LoukDo.com</p>
                 </div>
               </div>
               <div class="d-flex my-3">
-               <i class="fa-solid fa-phone pt-2 secondary-color me-3"></i>
+               <i class="fa-solid fa-phone pt-2 secondary-color me-3 icon"></i>
                 <div>
                   <h5>Phone</h5>
                   <p class="fw-normal">099943618</p>
                 </div>
               </div>
               <div class="d-flex my-3">
-                 <i class="fa-solid fa-location-dot mt-2 secondary-color me-3"></i>
+                 <i class="fa-solid fa-location-dot mt-2 secondary-color me-3 icon"></i>
                 <div>
                   <h5>Address</h5>
                   <p class="fw-normal">123 Street, Phnom Penh, Cambodia</p>
@@ -68,7 +71,10 @@
               </div>
             </div>
           </div>
-         <div class="col-12 col-lg-8 col-md-6">
+         <div class="col-12 col-lg-8 col-md-6" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
     <div class="shadows rounded-4 p-4">
         <h2 class="primary-color mb-4">Send us message</h2>
 
@@ -119,7 +125,7 @@
 
             <!-- Message -->
            <div class="mb-3">
-    <label class="form-label">Message</label>
+    <label class="form-label primary-color">Message</label>
     <textarea
         class="form-control"
         rows="5"
@@ -142,7 +148,9 @@
       </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up"
+    data-aos-once="false"
+    data-aos-mirror="true">
       <div class="container mt-5">
         <div class="row g-3">
          <div class="col-12 col-lg-8 col-md-6">
@@ -173,7 +181,8 @@
       </div>
     </section>
 
-     <footer class="mt-6">
+     <footer class="mt-6" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
        <div id="footer"></div>
       
     </footer>
@@ -184,6 +193,15 @@
     ></script>
 
     <script src="/JS/components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {

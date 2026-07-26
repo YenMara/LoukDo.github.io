@@ -23,13 +23,15 @@
     />
     <link rel="stylesheet" href="/CSS/brand.css" />
     <link rel="stylesheet" href="/CSS/login.css" />
+       <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
   </head>
   <body>
     <header class="position-absolute top-0 start-0 w-100 z-3">
        <div id="navbar"></div>
     </header>
 
-    <section>
+    <section  data-aos="zoom-in">
       <div class="container">
         <form action="" class="shadows p-4 rounded-4 mt-7">
           <div class="text-center">
@@ -142,26 +144,18 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('form');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const password = document.getElementById('exampleInputPassword').value;
-            const confirmPassword = document.getElementById('exampleInputConfirmPassword').value;
-            if (form.checkValidity() && password === confirmPassword) {
-              window.location.href = 'index.html';
-            } else if (password !== confirmPassword) {
-              alert('Passwords do not match.');
-            } else {
-              form.reportValidity();
-            }
-          });
-        }
-      });
-    </script>
+    <script src="/JS/register.js"></script>
 
       <script src="/JS/components.js"></script>
+               <!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
   </body>
 </html>

@@ -8,6 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/CSS/home.css" />
   <link rel="stylesheet" href="/CSS/brand.css" />
+  <link rel="stylesheet" href="/CSS/review.css">
   <style>
     body {
       background: #fffaf7;
@@ -34,12 +35,20 @@
           <form id="review-form">
             <div class="mb-3">
               <label for="name" class="form-label">Your name</label>
-              <input type="text" class="form-control rounded-4" id="name" name="name" required />
+              <input type="text" class="form-control rounded-4 w-form" id="name" name="name" placeholder="Enter your name" required minlength="2" autocomplete="name" />
+            </div>
+
+            <div class="mb-3">
+              <label for="review-image" class="form-label">Add photo (optional)</label>
+              <input type="file" class="form-control rounded-4 w-form" id="review-image" name="review-image" accept="image/*" />
+              <div class="mt-2" id="image-preview-container" style="display:none;">
+                <img id="image-preview" src="" alt="Preview" class="img-fluid rounded-4" style="max-height: 200px; object-fit: cover;" />
+              </div>
             </div>
 
             <div class="mb-3">
               <label for="rating" class="form-label">Rating</label>
-              <select class="form-select rounded-4" id="rating" name="rating">
+              <select class="form-select rounded-4" id="rating" name="rating" required>
                 <option value="5">5 stars</option>
                 <option value="4">4 stars</option>
                 <option value="3">3 stars</option>
@@ -50,8 +59,10 @@
 
             <div class="mb-3">
               <label for="comment" class="form-label">Your review</label>
-              <textarea class="form-control rounded-4" id="comment" name="comment" rows="4" required></textarea>
+              <textarea class="form-control rounded-4 w-form" id="comment" name="comment" rows="4" required></textarea>
             </div>
+
+            
 
             <div id="form-message"></div>
             <button type="submit" class="btn btn-outline-primary-color rounded-4 w-100">Submit review</button>
@@ -64,7 +75,31 @@
           <h3 class="primary-color mb-0">Recent reviews</h3>
           <a href="/pages/products.html" class="text-decoration-none primary-color">Back to products</a>
         </div>
-        <div id="review-list" class="row g-3"></div>
+
+        <div class="">
+            <div class="review-cart rounded-4 pt-3 h-100 d-flex mb-3 w-100">
+              <div class="review-img">
+                <img src="/images/beauty.jpg" alt="" class="w-100 h-100 object-fit-cover">
+              </div>
+             <div class="content ms-2">
+              <h4 class="primary-color">Jomros Store</h4>
+               <div>
+             <i class="fa-solid fa-star fs-7 text-warning"></i>
+             <i class="fa-solid fa-star fs-7 text-warning"></i>
+             <i class="fa-solid fa-star fs-7 text-warning"></i>
+              <i class="fa-regular fa-star fs-7 text-warning"></i>
+             <i class="fa-regular fa-star fs-7 text-warning"></i>
+           </div>
+           <p class="fw-normal text-secondary mt-2">Good skincare product and good price but didn't have a lot of product to choose with different size.</p>
+             <div class="d-flex justify-content-between">
+               <h6 class="primary-color">Sophea Chan</h6>
+               <p class="fw-normal">26-03-01</p>
+             </div>
+            </div>
+          </div>
+      </div>
+        
+       
       </div>
     </div>
   </main>
@@ -76,5 +111,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/JS/components.js"></script>
   <script src="/JS/review.js"></script>
+
+
 </body>
 </html>
