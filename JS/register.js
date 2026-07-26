@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('exampleInputPassword').value;
             const confirmPassword = document.getElementById('exampleInputConfirmPassword').value;
             if (form.checkValidity() && password === confirmPassword) {
-              window.location.href = 'index.html';
+              window.location.href = '../index.html';
             } else if (password !== confirmPassword) {
               alert('Passwords do not match.');
             } else {

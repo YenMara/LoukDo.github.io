@@ -137,7 +137,7 @@ function handleWishlistClick(event) {
         saveWishlistItems(items);
     }
 
-    const targetHref = trigger.getAttribute("href") || "pages/wishlist.html";
+    const targetHref = trigger.getAttribute("href") || getBasePath() + "pages/wishlist.html";
     window.location.href = targetHref;
 }
 
